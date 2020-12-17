@@ -56,7 +56,7 @@
 			Quest dailyQuest = Game1.questOfTheDay;
 			if (dailyQuest == null) return;
 
-			if (dailyQuest is ItemDeliveryQuest itemDeliveryQuest)
+			if (dailyQuest is ItemDeliveryQuest itemDeliveryQuest && dailyQuest.id.Value == 0)
 			{
 					itemDeliveryQuest.loadQuestInfo();
 					this.UpdateItemDeliveryQuest(itemDeliveryQuest);
